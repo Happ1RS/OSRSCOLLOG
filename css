@@ -1,0 +1,99 @@
+body {
+    font-family: 'RuneScape UF', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6d2;
+    color: #000;
+}
+
+header {
+    background-color: #1a120b;
+    color: #ff981f;
+    padding: 1rem;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 30px;
+    background-color: #3a3226;
+    margin: 1rem auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #ff981f;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.5s;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.category {
+    background-color: #3a3226;
+    color: #ff981f;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+.items-view {
+    padding: 1rem;
+    display: none;
+}
+
+.item {
+    background-color: #3a3226;
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.item-checkbox {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+}
+
+.back-button {
+    background-color: #ff981f;
+    color: #1a120b;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+}
